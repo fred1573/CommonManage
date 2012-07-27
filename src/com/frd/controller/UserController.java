@@ -164,4 +164,12 @@ public class UserController {
 			response.getWriter().print("success");
 		}
 	}
+	
+	@RequestMapping(value="/delete", method=RequestMethod.GET)
+	public ModelAndView emailCheck(@RequestParam("id")int id,
+			HttpServletResponse response) throws IOException{
+		User u = userService.get(id);
+		userService.delete(u);
+		return new ModelAndView("redirect: list");
+	}
 }

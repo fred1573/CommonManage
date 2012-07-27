@@ -21,4 +21,6 @@ public interface UserService {
 	void lock(User u);
 	
 	void update(User u);
+	
+	void delete(User u);
 }

@@ -54,6 +54,11 @@ public class UserDaoImpl implements UserDao {
 		// TODO Auto-generated method stub
 		return hibernateTemplate.find("from User where email=?", email);
 	}
+
+	@Override
+	public void delete(User u) {
+		this.hibernateTemplate.delete(u);
+	}
 	
 	
 
