@@ -131,7 +131,7 @@ public class UserController {
 	@RequestMapping(value="/exit", method=RequestMethod.GET)
 	public ModelAndView exit(@Valid UserForm userForm,
 			HttpServletRequest req){
-		ModelAndView mav = new ModelAndView("/login");
+		ModelAndView mav = new ModelAndView("redirect:/login");
 		try{
 			if(req.getSession().getAttribute("user") != null){
 				req.getSession().removeAttribute("user");
