@@ -78,7 +78,7 @@ public class AccountInController {
 	@RequestMapping(value = "/check", method = RequestMethod.GET)
 	public ModelAndView check(@RequestParam("id") int id,
 			HttpServletRequest request) {
-		ModelAndView mav = new ModelAndView("/account_in/list");
+		ModelAndView mav = new ModelAndView("redirect:list");
 		AccountIn ain = accountInService.get(id);
 		if(request.getSession().getAttribute("user") != null){
 			User u = (User)request.getSession().getAttribute("user");
