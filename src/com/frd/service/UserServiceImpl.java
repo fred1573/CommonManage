@@ -56,4 +56,9 @@ public class UserServiceImpl implements UserService {
 		return this.userDao.findByEmail(email);
 	}
 
+	@Override
+	public void delete(User u) {
+		this.userDao.delete(u);
+	}
+
 }

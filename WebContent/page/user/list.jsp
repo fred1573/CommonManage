@@ -35,6 +35,9 @@
 						<a href="unlock?id=${user.id }">unlock</a>
 					</c:if>
 				</td>
+				<td>
+					<a href="delete?id=${user.id }">delete</a>
+				</td>
 			</tr>
 		</c:forEach>
 	</table>
